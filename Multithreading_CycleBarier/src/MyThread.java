@@ -4,7 +4,6 @@ import java.util.concurrent.CyclicBarrier;
 /**
  * Created by dimitrij.mackert on 23.01.2018.
  */
-
 public class MyThread extends Thread
 {
     private final CyclicBarrier barrier;
@@ -12,14 +11,15 @@ public class MyThread extends Thread
 
     public MyThread(CyclicBarrier barrier)
     {
-        this.barrier=barrier;
+        this.barrier = barrier;
+
     }
 
 
     @Override
     public void run()
     {
-        System.out.println("i'm start. MyNumber "+ Thread.currentThread().getId());
+        System.out.println("i'm start. MyNumber " + Thread.currentThread().getId());
         try
         {
             barrier.await();
@@ -30,7 +30,10 @@ public class MyThread extends Thread
         {
             e.printStackTrace();
         }
-        System.out.println("i'm finish. MyNumber "+ Thread.currentThread().getId());
+
+
+
+        System.out.println("i'm finish. MyNumber " + Thread.currentThread().getId());
     }
 }
 
