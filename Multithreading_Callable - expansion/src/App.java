@@ -11,11 +11,12 @@ public class App
         ScheduledExecutorService statistic = Executors.newScheduledThreadPool(1);
 
         statistic.scheduleAtFixedRate(new Runnable()
-        {
+        {	
             @Override
             public void run()
             {
-                System.out.println(Transfer.unsuccessTransaction());
+                System.out.println("War nich erfolgreich "+Transfer.unsuccessTransaction());
+                System.out.println("War erfolgreich "+Transfer.successTransaction());
             }
         }, 2l, 1l, TimeUnit.SECONDS);
 
@@ -24,7 +25,7 @@ public class App
             Future<Boolean> future = service.submit(new Transfer(acc1, acc2, 100));
             Future<Boolean> future2 = service.submit(new Transfer(acc2, acc1, 100));
 
-            // System.out.println(future.get()+"  "+future2.get());
+             System.out.println(future.get()+"  "+future2.get());
 
         }
         service.shutdown();

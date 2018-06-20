@@ -1,19 +1,9 @@
-INDEX VERSION 1.129+C:\Users\mackert\JavaSobesedovanie\.metadata\.plugins\org.eclipse.jdt.core
-1108001896.index
-1082299541.index
-4126312634.index
-1004724046.index
-2971807449.index
-3119296128.index
-2748323898.index
-775439518.index
-376262889.index
-3721507988.index
-1808600397.index
-3405620362.index
-858780920.index
-3484981789.index
-2082893379.index
-4130751672.index
-279711792.index
-1811826409.index
+INDEX VERSION 1.131+G:\sobes\JavaSobesedovanie\.metadata\.plugins\org.eclipse.jdt.core
+1267145158.index
+1671589519.index
+3353811681.index
+1374282910.index
+227974518.index
+3106778664.index
+40458701.index
+4124776640.index

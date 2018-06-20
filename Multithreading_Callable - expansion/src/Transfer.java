@@ -26,6 +26,10 @@ public class Transfer implements Callable<Boolean>
     {
         return  counter_unsucces.get();
     }
+    public static int successTransaction()
+    {
+    	return  counter_succes.get();
+    }
     @Override
     public Boolean call() throws Exception
     {
@@ -47,15 +51,19 @@ public class Transfer implements Callable<Boolean>
                         Thread.sleep(100);
                         from.minus(amount);
                         to.plus(amount);
+                        counter_succes.incrementAndGet();
                         return true;
                     } finally
                     {
                         to.getLock().unlock();
                     }
                 }
+                
+                
                 else
                 {
                     counter_unsucces.incrementAndGet();
+                    
                     return false;
                 }
             } finally
